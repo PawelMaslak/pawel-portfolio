@@ -16,11 +16,11 @@ export class AppComponent {
 
   /* or the classic JavaScript object */
   particlesOptions = {
-    background: {
-      color: {
-        value: "#0d47a1",
-      },
-    },
+    // background: {
+    //   color: {
+    //     value: "#0d47a1",
+    //   },
+    // },
     fpsLimit: 120,
     interactivity: {
       events: {
@@ -39,8 +39,8 @@ export class AppComponent {
           quantity: 4,
         },
         repulse: {
-          distance: 100,
-          duration: 5.4,
+          distance: 20,
+          duration: 0.4,
         },
       },
     },
