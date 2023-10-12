@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgParticlesModule } from 'ng-particles';
+import { NavbarModule } from './modules/navbar/navbar.module';
+import { SiteComponentsModule } from './modules/site-components/site-components.module';
+
 
 @NgModule({
   declarations: [
@@ -13,6 +16,8 @@ import { NgParticlesModule } from 'ng-particles';
     BrowserModule,
     AppRoutingModule,
     NgParticlesModule, 
+    NavbarModule,
+    SiteComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
