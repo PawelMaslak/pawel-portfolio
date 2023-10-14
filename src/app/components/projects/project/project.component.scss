@@ -35,7 +35,7 @@ figure {
     }
 
     h1 {
-        font-weight: 500;
+        font-weight: 700;
         font-size: 1.5rem;
         text-align: center;
     }
@@ -82,5 +82,13 @@ figure:hover {
 
     figcaption {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 576px){
+    figure {
+        width: 400px;
+        margin: auto;
+        margin-bottom: 2rem;
     }
 }
