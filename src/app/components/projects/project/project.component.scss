@@ -1,0 +1,86 @@
+figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    height: 300px;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+
+    .project-thumbnail {
+        scale: 1;
+        transition: .7s ease-in-out;
+    }
+
+    figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        padding: 0 2rem;
+        width: 100%;
+        height: 100%;
+        background-color: #141c3a;
+        transition: .7s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .site-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #6E07F3;
+        width: 150px;
+        height: 35px;
+        border-radius: 9px;
+        transition: .7s ease-in-out;
+        margin: 1rem;
+
+        .text {
+            margin-right: 5px;
+        }
+    }
+
+    .site-link:hover {
+        cursor: pointer;
+        background-color: #6E07F3;
+    }
+
+    .github {
+        opacity: .65;
+        transition: .7s ease-in-out;
+    }
+
+    .github:hover {
+        opacity: 1;
+    }
+}
+
+figure:hover {
+    img {
+        opacity: 0;
+    }
+
+    .project-thumbnail {
+        scale: 1.2;
+    }
+
+    figcaption {
+        opacity: 1;
+    }
+}

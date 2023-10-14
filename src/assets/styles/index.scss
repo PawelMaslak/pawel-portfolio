@@ -1,21 +1,26 @@
 @import "./global";
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
-html
-body {
+html body {
   margin: 0;
   padding: 0;
   height: 100vh;
   background-image: radial-gradient(#021027, #000000);
   font-family: $fontNormal;
-  color: $fontColor;
+  color: $textColour;
+  user-select: none;
 
   ::-webkit-scrollbar {
     width: 20px;
   }
 
-  .row {
-    margin: 0;
+  .container {
+    border: 2px solid red;
+  }
+
+  a {
+    text-decoration: none;
+    color: $textColour;
   }
 }
 
