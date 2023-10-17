@@ -1,7 +1,7 @@
 FROM node:16.14.2 AS builder
 
 # Set the working directory in the container
-WORKDIR /app
+WORKDIR /pawel-portfolio-app
 
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
@@ -19,7 +19,7 @@ RUN node_modules/.bin/ng build --configuration production
 FROM nginx:alpine
 
 # Copy the Angular app from the builder stage to the NGINX web server
-COPY --from=builder /app/dist/app /usr/share/nginx/html
+COPY --from=builder /app/dist/pawel-portfolio-app /usr/share/nginx/html
 
 # Expose port 80 for NGINX
 EXPOSE 80
