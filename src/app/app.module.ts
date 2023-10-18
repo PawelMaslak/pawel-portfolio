@@ -5,13 +5,12 @@ import { AppComponent } from './app.component';
 import { NgParticlesModule } from 'ng-particles';
 import { NavbarModule } from './modules/navbar/navbar.module';
 import { SiteComponentsModule } from './modules/site-components/site-components.module';
-import { AboutComponent } from './components/about/about.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
   ],
   imports: [
     BrowserModule,

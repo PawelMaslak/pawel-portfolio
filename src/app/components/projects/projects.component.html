@@ -1,17 +1,18 @@
 <section class="projects pt-5 pb-5">
-    <div class="container d-flex flex-row-reverse">
-        <h1 class="title">My Projects</h1>
+    <div class="container" *ngIf="isLoading">
+        {{loadingProgress}}
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-6 col-xl-4 mt-2 mb-2">
-                <app-project [siteLink]="'link1'" [githubLink]="'githubLink1'" [imagePath]="'imagePath1'"></app-project>
-            </div>
-            <div class="col-12 col-sm-6 col-xl-4 mt-2 mb-2">
-                <app-project [siteLink]="'link1'" [githubLink]="'githubLink1'" [imagePath]="'imagePath1'"></app-project>
-            </div>
-            <div class="col-12 col-sm-6 col-xl-4 mt-2 mb-2">
-                <app-project [siteLink]="'link1'" [githubLink]="'githubLink1'" [imagePath]="'imagePath1'"></app-project>
+    <app-loading></app-loading>
+    <!-- <app-loading ></app-loading> -->
+    <div class="data" *ngIf="!isLoading">
+        <div class="container d-flex flex-row-reverse">
+            <h1 class="title">My Projects</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-xl-4 mt-2 mb-2" *ngFor="let project of projects">
+                    <app-project [project]="project"></app-project>
+                </div>
             </div>
         </div>
     </div>

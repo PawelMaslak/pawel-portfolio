@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { WelcomeComponent } from 'src/app/components/welcome/welcome.component';
 import { FooterComponent } from 'src/app/components/footer/footer.component';
+import { AboutComponent } from 'src/app/components/about/about.component';
+import { LoadingComponent } from 'src/app/components/loading/loading.component';
 
 import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import {
@@ -24,13 +26,17 @@ import { ProjectComponent } from 'src/app/components/projects/project/project.co
     WelcomeComponent,
     FooterComponent,
     ProjectsComponent,
-    ProjectComponent
+    ProjectComponent,
+    AboutComponent,
+    LoadingComponent
   ],
   exports: [
     WelcomeComponent,
     FooterComponent,
     ProjectsComponent,
-    ProjectComponent
+    ProjectComponent,
+    AboutComponent,
+    LoadingComponent
   ],
   imports: [
     CommonModule,
