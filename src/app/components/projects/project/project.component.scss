@@ -5,18 +5,34 @@ figure {
     height: 275px;
     margin: 0;
 
+    .image-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .loading {
+            transition: all .7s ease-in-out;
+        }
+    }
+
     img {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        border-radius: 12px;
         opacity: 1;
+        display: none;
     }
 
     .project-thumbnail {
+        display: none;
+        opacity: 0;
         scale: 1;
-        transition: .7s ease-in-out;
+        transition: all 2s ease-in-out;
     }
 
     figcaption {
@@ -24,7 +40,7 @@ figure {
         top: 0;
         left: 0;
         opacity: 0;
-        padding: 0 2rem;
+        padding: 2rem;
         width: 100%;
         height: 100%;
         background-color: #141c3a;
@@ -32,7 +48,10 @@ figure {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+
+        .description {
+            height: 100px;
+        }
     }
 
     h1 {
@@ -86,12 +105,12 @@ figure:hover {
     }
 }
 
-@media screen and (max-width: 992px) and (min-width: 575px){
+@media screen and (max-width: 1200px) and (min-width: 575px) {
     figure {
-        width: calc(100% - 5px);
+        width: 380px;
         height: 250px;
         margin: auto;
-        
+
         h1 {
             font-size: 1rem;
         }
@@ -100,7 +119,9 @@ figure:hover {
 
 @media screen and (max-width: 575px) {
     figure {
+        width: calc(100% - 20px);
         height: 250px;
+        margin: auto;
 
         h1 {
             font-size: 1.2rem;

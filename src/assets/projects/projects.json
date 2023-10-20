@@ -1,0 +1,24 @@
+[
+    {
+        "siteName": "Montana PhiBrows",
+        "thumbnailPath": "assets/images/projects/montanaphibrows.jpg",
+        "siteLink": "https://montanaphibrows.ch",
+        "repositoryLink": "https://github.com/PawelMaslak/MontanaPhiBrows.Frontend",
+        "description": "Multilingual business card website built with Angular and SCSS"
+    },
+    {
+        "siteName": "Pawel Maslak",
+        "thumbnailPath": "assets/images/projects/pawelmaslak.jpg",
+        "siteLink": "https://pawelmaslak.com",
+        "repositoryLink": "https://github.com/PawelMaslak/pmp-deploy",
+        "description": "Previous version of this website built with Angular and SCSS"
+    },
+    {
+        "siteName": "API Services",
+        "thumbnailPath": "assets/images/projects/maslaktechnology.jpg",
+        "siteLink": null,
+        "repositoryLink": null,
+        "description": "Services handling third party APIs - capturing the data, processing and storing for further raporting built with .NET 6"
+    }
+]
+

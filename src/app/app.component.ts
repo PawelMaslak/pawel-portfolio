@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MoveDirection, ClickMode, HoverMode, OutMode, Container, Engine } from "tsparticles-engine";
-//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
 @Component({
@@ -8,13 +7,51 @@ import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSli
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+    this.load();
+  }
+
+  private load() {
+    const loading = document.querySelector('.loading') as HTMLElement;
+    const content = document.querySelector('.content') as HTMLElement;
+    const particles = document.querySelector('.particles') as HTMLElement;
+
+    setTimeout(() => {
+      loading.style.opacity = '0';
+      content.style.display = 'block';
+      particles.style.display = 'block';
+      setTimeout(() => {
+        content.style.opacity = '1';
+        particles.style.opacity = '1';
+        loading.style.display = 'none';
+      }, 10)
+    }, 1500);
+
+    //content.style.display = 'block';
+
+    setTimeout(() => {
+
+      //content.style.opacity = '1';
+      //loading.style.display = 'none'
+    }, 2000)
+
+    //content.style.display = 'block';
+
+    // setTimeout(() => {
+    //   //loading.style.opacity = '0';
+
+    //   setTimeout(() => {
+    //     //loading.style.display = 'none';
+    //     content.style.display = 'block';
+    //     content.style.opacity = '1';
+    //   }, 1000)
+    // }, 1000)
+    //loading.style.opacity = '0';
+  }
+
   id = "tsparticles";
 
-  /* Starting from 1.19.0 you can use a remote url (AJAX request) to a JSON with the configuration */
-  particlesUrl = "http://foo.bar/particles.json";
-
-  /* or the classic JavaScript object */
   particlesOptions = {
     fpsLimit: 120,
     interactivity: {
@@ -72,17 +109,7 @@ export class AppComponent {
     detectRetina: true,
   };
 
-  particlesLoaded(container: Container): void {
-    console.log(container);
-  }
-
   async particlesInit(engine: Engine): Promise<void> {
-    console.log(engine);
-
-    // Starting from 1.19.0 you can add custom presets or shape here, using the current tsParticles instance (main)
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    //await loadFull(engine);
     await loadSlim(engine);
   }
 }

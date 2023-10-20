@@ -15,8 +15,6 @@
     }
 }
 
-
-
 .name {
     font-family: $textBold;
     text-transform: capitalize;
@@ -39,11 +37,15 @@
 
     img {
         width: 350px;
-        aspect-ratio: 1/1;
         border-radius: 50%;
         -webkit-filter: grayscale(100%);
         /* Safari 6.0 - 9.0 */
         filter: grayscale(100%);
+        transition: all .7s ease-in-out;
+    }
+
+    .loading {
+        transition: all .7s ease-in-out;
     }
 }
 

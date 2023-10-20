@@ -1,25 +1,25 @@
 <figure class="image">
-     <img class="project-thumbnail" src="../../../../assets/images/photos/testWebsite.png" alt="">
+     <div class="image-container">
+          <img #image class="project-thumbnail" (load)="onLoadImage(image, loading)" src="{{project.thumbnailPath}}"
+               alt="">
+          <div #loading class="loading">
+               <app-loading></app-loading>
+          </div>
+     </div>
      <figcaption>
-          <!--Add description input-->
           <h1 class="description">
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+               {{project.description}}
           </h1>
-          <!-- Dynamically render the element based on the input using ngIf directive-->
-          <a href="https://www.google.com" class="site-link" target="_blank" title="Visit website!">
+          <a href="{{project.siteLink}}" *ngIf="project.siteLink" class="site-link" target="_blank"
+               title="Visit website!">
                <span class="d-flex justify-content-between">
                     <span class="text">Visit website</span>
                     <fa-icon [icon]="['fas', 'arrow-right']" size="lg"></fa-icon>
                </span>
           </a>
-          <a href="https://github.com/PawelMaslak" class="github" target="_blank" title="Visit repository page!">
+          <a href="{{project.repositoryLink}}" *ngIf="project.repositoryLink" class="github" target="_blank"
+               title="Visit repository page!">
                <fa-icon [icon]="['fab', 'github']" size="2x"></fa-icon>
           </a>
      </figcaption>
 </figure>
-
-
-<!-- <div class="project-container d-flex justify-content-center flex-wrap mt-2 mb-2">
-      <img src="../../../../assets/images/photos/testWebsite.png" alt="">
-     <div class="overlay"></div>
-</div> -->
