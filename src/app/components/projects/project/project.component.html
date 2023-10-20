@@ -1,5 +1,11 @@
 <figure class="image">
-     <img class="project-thumbnail" src="{{project.thumbnailPath}}" alt="">
+     <div class="image-container">
+          <img #image class="project-thumbnail" (load)="onLoadImage(image, loading)" src="{{project.thumbnailPath}}"
+               alt="">
+          <div #loading class="loading">
+               <app-loading></app-loading>
+          </div>
+     </div>
      <figcaption>
           <h1 class="description">
                {{project.description}}

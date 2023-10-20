@@ -5,6 +5,18 @@ figure {
     height: 275px;
     margin: 0;
 
+    .image-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .loading {
+            transition: all .7s ease-in-out;
+        }
+    }
+
     img {
         position: absolute;
         top: 0;
@@ -13,11 +25,14 @@ figure {
         height: 100%;
         border-radius: 12px;
         opacity: 1;
+        display: none;
     }
 
     .project-thumbnail {
+        display: none;
+        opacity: 0;
         scale: 1;
-        transition: .7s ease-in-out;
+        transition: all 2s ease-in-out;
     }
 
     figcaption {

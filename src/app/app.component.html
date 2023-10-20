@@ -1,9 +1,15 @@
-<app-navbar></app-navbar>
-<app-welcome></app-welcome>
-<app-projects></app-projects>
-<!-- <router-outlet></router-outlet> -->
-<app-footer></app-footer>
-
+<section #loading class="loading">
+    <app-loading></app-loading>
+</section>
+<section #content class="content">
+    <app-navbar></app-navbar>
+    <app-welcome></app-welcome>
+    <app-projects></app-projects>
+    <app-footer></app-footer>
+</section>
 <ng-particles class="particles" [id]="id" [options]="particlesOptions" [particlesInit]="particlesInit"></ng-particles>
 
-  
+
+
+
+
