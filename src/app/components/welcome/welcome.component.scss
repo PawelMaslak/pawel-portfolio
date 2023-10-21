@@ -44,6 +44,11 @@
         transition: all .7s ease-in-out;
     }
 
+    img:hover {
+        -webkit-filter: none;
+        filter: none;
+    }
+
     .loading {
         transition: all .7s ease-in-out;
     }

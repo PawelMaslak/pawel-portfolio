@@ -14,11 +14,11 @@
         "description": "Previous version of this website built with Angular and SCSS"
     },
     {
-        "siteName": "API Services",
-        "thumbnailPath": "assets/images/projects/maslaktechnology.jpg",
-        "siteLink": null,
+        "siteName": "Enigma",
+        "thumbnailPath": "assets/images/projects/enigma.jpg",
+        "siteLink": "https://enigma.pawelmaslak.com",
         "repositoryLink": null,
-        "description": "Services handling third party APIs - capturing the data, processing and storing for further raporting built with .NET 6"
+        "description": "Enigma machine simulator. Have fun being Alan Touring for a day!"
     }
 ]
 
