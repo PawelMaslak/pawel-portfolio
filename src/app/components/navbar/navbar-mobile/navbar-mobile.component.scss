@@ -1,5 +1,12 @@
 .container {
-    //background-color: wheat;
-    border: 2px solid red;
     min-height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+        width: 120px;
+        margin-top: -30px;
+        margin-bottom: -40px;
+    }
 }

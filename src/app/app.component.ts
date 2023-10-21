@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 import { MoveDirection, ClickMode, HoverMode, OutMode, Container, Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
@@ -17,37 +18,27 @@ export class AppComponent implements OnInit {
     const content = document.querySelector('.content') as HTMLElement;
     const particles = document.querySelector('.particles') as HTMLElement;
 
-    setTimeout(() => {
+    console.log(environment);
+
+    if(!environment.production) {
+      loading.style.display = 'none';
       loading.style.opacity = '0';
+
       content.style.display = 'block';
-      particles.style.display = 'block';
+      content.style.opacity = '1';
+    }
+    else {
       setTimeout(() => {
-        content.style.opacity = '1';
-        particles.style.opacity = '1';
-        loading.style.display = 'none';
-      }, 10)
-    }, 1500);
-
-    //content.style.display = 'block';
-
-    setTimeout(() => {
-
-      //content.style.opacity = '1';
-      //loading.style.display = 'none'
-    }, 2000)
-
-    //content.style.display = 'block';
-
-    // setTimeout(() => {
-    //   //loading.style.opacity = '0';
-
-    //   setTimeout(() => {
-    //     //loading.style.display = 'none';
-    //     content.style.display = 'block';
-    //     content.style.opacity = '1';
-    //   }, 1000)
-    // }, 1000)
-    //loading.style.opacity = '0';
+        loading.style.opacity = '0';
+        content.style.display = 'block';
+        particles.style.display = 'block';
+        setTimeout(() => {
+          content.style.opacity = '1';
+          particles.style.opacity = '1';
+          loading.style.display = 'none';
+        }, 10)
+      }, 1500);
+    }
   }
 
   id = "tsparticles";
