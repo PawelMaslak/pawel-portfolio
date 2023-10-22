@@ -10,7 +10,7 @@ import { SiteComponentsModule } from './modules/site-components/site-components.
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
