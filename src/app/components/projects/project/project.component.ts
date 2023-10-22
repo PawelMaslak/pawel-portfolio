@@ -10,8 +10,7 @@ export class ProjectComponent {
   @Input() project: ProjectItem;
   @ViewChild('image') image: ElementRef;
   @ViewChild('loading') loading: ElementRef;
-  imageLoaded: boolean = false;
-
+  
   constructor(private renderer: Renderer2) { }
 
   public async onLoadImage(image: HTMLImageElement, loading: HTMLElement): Promise<void> {
