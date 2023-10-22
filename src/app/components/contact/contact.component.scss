@@ -1,0 +1,43 @@
+@import '/src/assets/styles/global';
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+
+    .contact-message {
+        font-family: $textNormal;
+        opacity: 0.65;
+        font-size: 1.5rem;
+        letter-spacing: -.5px;
+        text-align: justify;
+    }
+
+    .button {
+        width: 150px;
+        height: 75px;
+        border: 1px solid #6E07F3;
+        border-radius: 7px;
+        transition: all .5s linear;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .button-message {
+            font-family: $textNormal;
+            text-transform: uppercase;
+            opacity: 0.9;
+            font-size: 1.2rem;
+            transition: all .5s linear;
+            font-weight: bold;
+        }
+
+        .button-message:hover {
+            color: #19B1CF;
+        }
+    }
+
+    .button:hover {
+        border-radius: 15px;
+        background-color: #6E07F3;
+    }
+}
