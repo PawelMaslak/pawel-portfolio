@@ -1,24 +1,23 @@
 [
-    {
-        "siteName": "Montana PhiBrows",
-        "thumbnailPath": "assets/images/projects/montanaphibrows.jpg",
-        "siteLink": "https://montanaphibrows.ch",
-        "repositoryLink": "https://github.com/PawelMaslak/MontanaPhiBrows.Frontend",
-        "description": "Multilingual business card website built with Angular and SCSS"
-    },
-    {
-        "siteName": "Pawel Maslak",
-        "thumbnailPath": "assets/images/projects/pawelmaslak.jpg",
-        "siteLink": "https://pawelmaslak.com",
-        "repositoryLink": "https://github.com/PawelMaslak/pmp-deploy",
-        "description": "Previous version of this website built with Angular and SCSS"
-    },
-    {
-        "siteName": "Enigma",
-        "thumbnailPath": "assets/images/projects/enigma.jpg",
-        "siteLink": "https://enigma.pawelmaslak.com",
-        "repositoryLink": null,
-        "description": "Enigma machine simulator. Have fun being Alan Touring for a day!"
-    }
+  {
+    "siteName": "Montana PhiBrows",
+    "thumbnailPath": "assets/images/projects/montanaphibrows.jpg",
+    "siteLink": "https://montanaphibrows.ch",
+    "repositoryLink": "https://github.com/PawelMaslak/MontanaPhiBrows.Frontend",
+    "description": "Multilingual business card website built with Angular and SCSS"
+  },
+  {
+    "siteName": "Pawel Maslak",
+    "thumbnailPath": "assets/images/projects/pawelmaslak.jpg",
+    "siteLink": "https://pawelmaslak.com",
+    "repositoryLink": "https://github.com/PawelMaslak/pmp-deploy",
+    "description": "Previous version of this website built with Angular and SCSS"
+  },
+  {
+    "siteName": "Enigma",
+    "thumbnailPath": "assets/images/projects/enigma.jpg",
+    "siteLink": "https://enigma.pawelmaslak.com",
+    "repositoryLink": "https://github.com/PawelMaslak/enigma",
+    "description": "Enigma machine simulator. Have fun being Alan Touring for a day!"
+  }
 ]
-
